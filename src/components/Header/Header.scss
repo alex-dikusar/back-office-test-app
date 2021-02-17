@@ -1,0 +1,29 @@
+.ant-layout-header.header {
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    float: left;
+    width: 160px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: url('../../images/logo.png') no-repeat center;
+    background-size: contain;
+  }
+
+  .ant-avatar {
+    cursor: pointer;
+  }
+}
+
+.ant-layout-header .button-group {
+  padding-right: 20px;
+
+  button {
+    border: none;
+  }
+}
+
+.ant-layout-header.header {
+  padding: 0 20px;
+}
