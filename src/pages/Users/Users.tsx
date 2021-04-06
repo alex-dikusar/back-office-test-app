@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import './Content.scss';
+import './Users.scss';
 
 import { CheckSquareOutlined, CloseSquareOutlined } from '@ant-design/icons';
 import { Layout, Table, Tag } from 'antd';
+import MainLayout from '../../components/MainLayout/MainLayout';
 const { Content: AntContent } = Layout;
 
 const columns = [
@@ -57,16 +58,16 @@ const data: any[] = [];
 for (let i = 0; i < 46; i++) {
     data.push({
         key: i,
-        flow: (i % 2 === 0) ? 'Regular' : 'QRM Registration',
+        flow: (i % 2 === 0) ? 'Regular' : 'Specific',
         firstName: `Edward`,
         lastName: `King ${i}`,
         emailVerified: i % 2 === 0,
-        origin: (i % 2 === 0) ? 'Quickbooks' : 'APP',
+        origin: (i % 2 === 0) ? 'Mobile' : 'APP',
         address: `London, Park Lane no. ${i}`,
     });
 }
 
-function Content() {
+function Users() {
     const [selectedRowKeys, setSelectedRows] = useState([]);
     const rowSelection = {
         selectedRowKeys,
@@ -74,12 +75,14 @@ function Content() {
     };
 
     return (
-        <Layout>
-            <AntContent className="site-layout-background">
-                <Table rowSelection={rowSelection as any} columns={columns} dataSource={data} />
-            </AntContent>
-        </Layout>
+        <MainLayout>
+            <Layout>
+                <AntContent className="site-layout-background">
+                    <Table rowSelection={rowSelection as any} columns={columns} dataSource={data} />
+                </AntContent>
+            </Layout>
+        </MainLayout>
     );
 }
 
-export default Content;
+export default Users;

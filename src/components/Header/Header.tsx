@@ -24,11 +24,11 @@ function Header() {
       <AntHeader className="header">
           <Space>
               <div className="logo" />
-              <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-                  <MenuItem key="1">Inbox</MenuItem>
-                  <MenuItem key="2">Data</MenuItem>
-                  <MenuItem key="3">Reports</MenuItem>
-              </Menu>
+              {/*<Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>*/}
+              {/*    <MenuItem key="1">Inbox</MenuItem>*/}
+              {/*    <MenuItem key="2">Data</MenuItem>*/}
+              {/*    <MenuItem key="3">Reports</MenuItem>*/}
+              {/*</Menu>*/}
           </Space>
           <Space>
               <Space className="button-group">

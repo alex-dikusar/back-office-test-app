@@ -1,21 +1,27 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './SideNav.scss';
 
-import { TeamOutlined, BankOutlined, CreditCardOutlined } from '@ant-design/icons';
+import { TeamOutlined, BankOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
 const { Item } = Menu;
 const { Sider } = Layout;
 
 function SideNav() {
+  const { pathname } = useLocation();
   return (
       <Sider className="site-layout-background">
           <Menu
               mode="inline"
               defaultSelectedKeys={['1']}
+              selectedKeys={[pathname]}
           >
-              <Item key="1" icon={<TeamOutlined />} >Users</Item>
-              <Item key="2" icon={<BankOutlined />} >Organizations</Item>
-              <Item key="3" icon={<CreditCardOutlined />} >Payments</Item>
+              <Item key="/users" icon={<TeamOutlined />} >
+                  <Link to="/users">Users</Link>
+              </Item>
+              <Item key="/groups" icon={<BankOutlined />} >
+                  <Link to="/groups">Groups</Link>
+              </Item>
           </Menu>
       </Sider>
   );
