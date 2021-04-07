@@ -2,11 +2,11 @@ import React from 'react';
 import './Header.scss';
 
 import { UserOutlined, SettingOutlined, BellOutlined, EditOutlined } from '@ant-design/icons';
-import { Layout, Menu, Avatar, Row, Col, Button, Space, Dropdown } from 'antd';
+import { Layout, Menu, Avatar, Button, Space, Dropdown } from 'antd';
 const { Header: AntHeader } = Layout;
 const { Item: MenuItem, Divider } = Menu;
 
-const menu = (
+const menu = (onLogout: () => void) => (
     <Menu>
         <MenuItem  key="0">
             <a href="http://www.alipay.com/">Profile</a>
@@ -15,11 +15,11 @@ const menu = (
             <a href="http://www.taobao.com/">Settings</a>
         </MenuItem >
         <Divider />
-        <MenuItem key="3">Logout</MenuItem>
+        <MenuItem onClick={onLogout} key="3">Logout</MenuItem>
     </Menu>
 );
 
-function Header() {
+function Header({ onLogout }: any) {
   return (
       <AntHeader className="header">
           <Space>
@@ -36,7 +36,7 @@ function Header() {
                   <Button icon={<SettingOutlined />} ghost />
                   <Button icon={<BellOutlined />} ghost />
               </Space>
-              <Dropdown overlay={menu}>
+              <Dropdown overlay={menu(onLogout)}>
                   <Avatar icon={<UserOutlined />} />
               </Dropdown>
           </Space>

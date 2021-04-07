@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import './Login.scss';
 
 import { Form, Input, Button, Alert } from 'antd';
@@ -11,7 +12,13 @@ const tailLayout = {
     wrapperCol: { offset: 9, span: 6 },
 };
 
-function Login({ onLoginProceed, isAuthFailed }: any) {
+function Login({ onLoginProceed, isLoggedIn, isAuthFailed }: any) {
+    if (isLoggedIn) {
+        return (
+            <Redirect to='/' />
+        )
+    }
+
     return (
         <div className="form-wrapper">
             <Form

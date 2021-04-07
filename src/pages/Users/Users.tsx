@@ -67,7 +67,7 @@ for (let i = 0; i < 46; i++) {
     });
 }
 
-function Users() {
+function Users(props: any) {
     const [selectedRowKeys, setSelectedRows] = useState([]);
     const rowSelection = {
         selectedRowKeys,
@@ -75,7 +75,7 @@ function Users() {
     };
 
     return (
-        <MainLayout>
+        <MainLayout {...props}>
             <Layout>
                 <AntContent className="site-layout-background">
                     <Table rowSelection={rowSelection as any} columns={columns} dataSource={data} />
