@@ -17,10 +17,10 @@ function SideNav() {
               selectedKeys={[pathname]}
           >
               <Item key="/users" icon={<TeamOutlined />} >
-                  <Link to="/users">Users</Link>
+                  <Link data-test-id="users-tab" to="/users">Users</Link>
               </Item>
               <Item key="/groups" icon={<BankOutlined />} >
-                  <Link to="/groups">Groups</Link>
+                  <Link data-test-id="groups-tab" to="/groups">Groups</Link>
               </Item>
           </Menu>
       </Sider>

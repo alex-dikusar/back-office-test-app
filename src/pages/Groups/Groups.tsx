@@ -59,7 +59,7 @@ function Groups(props: any) {
 
     return (
         <MainLayout {...props}>
-            <AntContent className="site-layout-background">
+            <AntContent data-test-id="groups-page"  className="site-layout-background">
                 <Table rowSelection={rowSelection as any} columns={columns} dataSource={data} />
             </AntContent>
         </MainLayout>

@@ -20,7 +20,7 @@ function Login({ onLoginProceed, isLoggedIn, isAuthFailed }: any) {
     }
 
     return (
-        <div className="form-wrapper">
+        <div data-test-id="login-page" className="form-wrapper">
             <Form
                 {...layout}
                 name="basic"
@@ -35,6 +35,7 @@ function Login({ onLoginProceed, isLoggedIn, isAuthFailed }: any) {
                 }
 
                 <Form.Item
+                    data-test-id="username"
                     label="Username"
                     name="username"
                     rules={[{ required: true, message: 'Please input your username!' }]}
@@ -43,6 +44,7 @@ function Login({ onLoginProceed, isLoggedIn, isAuthFailed }: any) {
                 </Form.Item>
 
                 <Form.Item
+                    data-test-id="password"
                     label="Password"
                     name="password"
                     rules={[{ required: true, message: 'Please input your password!' }]}
@@ -51,7 +53,11 @@ function Login({ onLoginProceed, isLoggedIn, isAuthFailed }: any) {
                 </Form.Item>
 
                 <Form.Item {...tailLayout}>
-                    <Button type="primary" htmlType="submit">
+                    <Button
+                        data-test-id="login-submit"
+                        type="primary"
+                        htmlType="submit"
+                    >
                         Submit
                     </Button>
                 </Form.Item>

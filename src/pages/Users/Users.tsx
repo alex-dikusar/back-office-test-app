@@ -76,11 +76,9 @@ function Users(props: any) {
 
     return (
         <MainLayout {...props}>
-            <Layout>
-                <AntContent className="site-layout-background">
-                    <Table rowSelection={rowSelection as any} columns={columns} dataSource={data} />
-                </AntContent>
-            </Layout>
+            <AntContent data-test-id="users-page" className="site-layout-background">
+                <Table rowSelection={rowSelection as any} columns={columns} dataSource={data} />
+            </AntContent>
         </MainLayout>
     );
 }

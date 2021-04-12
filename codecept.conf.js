@@ -1,5 +1,5 @@
 const { setHeadlessWhen } = require('@codeceptjs/configure');
-// const url = process.env.LOCAL || 'https://dev.acronis.com';
+const url = process.env.LOCAL || 'http://localhost:3007';
 
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
@@ -12,6 +12,7 @@ exports.config = {
     TestCafe: {
       browser: "chrome",
       show: true,
+      url: url
     }
   },
   include: {

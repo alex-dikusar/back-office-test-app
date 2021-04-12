@@ -15,7 +15,7 @@ const menu = (onLogout: () => void) => (
             <a href="http://www.taobao.com/">Settings</a>
         </MenuItem >
         <Divider />
-        <MenuItem onClick={onLogout} key="3">Logout</MenuItem>
+        <MenuItem data-test-id="logout-btn" onClick={onLogout} key="3">Logout</MenuItem>
     </Menu>
 );
 
@@ -37,7 +37,7 @@ function Header({ onLogout }: any) {
                   <Button icon={<BellOutlined />} ghost />
               </Space>
               <Dropdown overlay={menu(onLogout)}>
-                  <Avatar icon={<UserOutlined />} />
+                  <Avatar data-test-id="user-avatar" icon={<UserOutlined />} />
               </Dropdown>
           </Space>
       </AntHeader>
