@@ -19,16 +19,16 @@
     "scripts": {
         "start": "PORT=3007 craco start",
         "build": "craco build",
-        "test": "craco test",
         "eject": "react-scripts eject",
-        "codeceptjs": "codeceptjs run --steps",
-        "codeceptjs:debug": "codeceptjs run --steps --debug",
-        "codeceptjs:verbose": "codeceptjs run --steps --verbose",
-        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
-        "codeceptjs:ui": "codecept-ui --app",
-        "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
-        "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
-        "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
+        "test:unit": "craco test",
+        "test": "codeceptjs run --steps",
+        "test:debug": "codeceptjs run --steps --debug",
+        "test:verbose": "codeceptjs run --steps --verbose",
+        "test:headless": "HEADLESS=true codeceptjs run --steps",
+        "test:ui": "codecept-ui --app",
+        "test:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "test:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "test:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
     },
     "eslintConfig": {
         "extends": [

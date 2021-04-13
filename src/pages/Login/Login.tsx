@@ -29,7 +29,7 @@ function Login({ onLoginProceed, isLoggedIn, isAuthFailed }: any) {
             >
                 {
                     isAuthFailed &&
-                    <Form.Item className="auth-error-message">
+                    <Form.Item data-test-id="auth-error-message" className="auth-error-message">
                       <Alert message="Username or password is invalid" type="error" />
                     </Form.Item>
                 }

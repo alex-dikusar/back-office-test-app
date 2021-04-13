@@ -6,7 +6,7 @@ import SideNav from '../SideNav/SideNav';
 
 function MainLayout({ children, ...props }: any) {
     return (
-        <Layout>
+        <Layout data-test-id="main-page-layout">
             <Header {...props}/>
             <Layout>
                 <SideNav {...props}/>

@@ -10,6 +10,7 @@ module.exports = function() {
       const userNameElement = "[data-test-id='username']";
       const passwordElement = "[data-test-id='password']";
       const submitBtn = "[data-test-id='login-submit']";
+      const mainPageLayoutElement = "[data-test-id='main-page-layout']";
 
       this.amOnPage("/");
 
@@ -20,6 +21,7 @@ module.exports = function() {
       this.fillField(passwordElement, password);
 
       this.click(submitBtn);
+      this.seeElement(mainPageLayoutElement);
     },
   });
 }
