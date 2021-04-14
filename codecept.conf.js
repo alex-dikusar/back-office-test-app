@@ -8,11 +8,11 @@ const localConfig = {
 
 const remoteConfig = {
   pattern: './e2e/tests_remote/*.spec.js',
-  url: 'http://localhost:3007',
+  url: 'https://softteco.com',
   include: './e2e/steps_file_remote.js'
 }
 
-const config = localConfig;
+const config = remoteConfig;
 const url = process.env.LOCAL || config.url;
 
 // turn on headless mode when running with HEADLESS=true environment variable
@@ -24,12 +24,16 @@ exports.config = {
   output: './e2e/output',
   helpers: {
     TestCafe: {
-      waitForTimeout: 2000,
-      getPageTimeout: 3000,
+      waitForTimeout: 20000,
+      getPageTimeout: 30000,
       browser: 'chrome',
       show: true,
-      url: url
-    }
+      url: url,
+      // windowSize: "500x500"
+    },
+    REST: {
+      endpoint: url
+    },
   },
   include: {
     I: config.include

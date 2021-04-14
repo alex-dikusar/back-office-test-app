@@ -21,6 +21,7 @@ module.exports = function() {
       this.fillField(passwordElement, password);
 
       this.click(submitBtn);
+      this.waitInUrl('/users');
       this.seeElement(mainPageLayoutElement);
     },
   });

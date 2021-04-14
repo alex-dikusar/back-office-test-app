@@ -1,4 +1,4 @@
-Feature('Test pages feature');
+Feature('Test login feature');
 
 Scenario('test logout action', ({ I }) => {
   const userAvatarElement = "[data-test-id='user-avatar']";
