@@ -27,10 +27,6 @@ module.exports = function() {
       this.click(secondNextButtonElement);
       this.wait(1);
 
-      this.fillField("[id='firstName']", 'Alexander')
-      this.fillField("[id='lastName']", 'Dikusar')
-      this.click("[jsname='LgbsSe']");
-
       this.seeElement(passwordElement);
     },
   });
